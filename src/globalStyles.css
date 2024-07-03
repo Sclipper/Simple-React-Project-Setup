@@ -1,0 +1,305 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.app-container {
+  background-color: var(--accent-1)
+}
+
+:root {
+  /* Base font styles */
+  --font-family-inter: 'Inter', sans-serif;
+  --font-family-haptic: '"Haptic Bold", "Rotalic"', sans-serif;
+
+  /* Specific typography styles */
+  --typo-h1-font-size: 45px;
+  --typo-h1-font-weight: 700;
+  --typo-h1-line-height: 64px;
+  --typo-h1-letter-spacing: -0.25px;
+
+  --typo-h2-font-size: 24px;
+  --typo-h2-font-weight: 700;
+  --typo-h2-line-height: 36px;
+  --typo-h2-letter-spacing: 0;
+
+  /* Extend for other headings and typography elements */
+
+  /* Link styles */
+  --link-font-size: 14px;
+  --link-line-height: 24px;
+  --link-letter-spacing: 0.2px;
+  --link-text-decoration: underline;
+  --link-text-underline-offset: 4px;
+}
+
+.radix-themes {
+  --default-font-family: var(--font-family-inter);
+  --heading-font-family: var(--font-family-haptic);
+  --strong-font-family: var(--font-family-inter);
+  --em-font-family: var(--font-family-inter);
+  --quote-font-family: var(--font-family-inter);
+  /* Add custom properties for specific components as needed */
+
+  --base-unit: 8px; /* Assuming 1x is 8px as per your scale */
+
+  /* Spacing Scale */
+  --space-0-25x: calc(var(--base-unit) * 0.25); /* 2px */
+  --space-0-5x: calc(var(--base-unit) * 0.5);   /* 4px */
+  --space-1x: var(--base-unit);                 /* 8px */
+  --space-1-5x: calc(var(--base-unit) * 1.5);   /* 12px */
+  --space-2x: calc(var(--base-unit) * 2);       /* 16px */
+  --space-2-5x: calc(var(--base-unit) * 2.5);   /* 20px */
+  --space-3x: calc(var(--base-unit) * 3);       /* 24px */
+  --space-4x: calc(var(--base-unit) * 4);       /* 32px */
+  --space-4-5x: calc(var(--base-unit) * 4.5);   /* 36px */
+  --space-5x: calc(var(--base-unit) * 5);       /* 40px */
+  --space-6x: calc(var(--base-unit) * 6);       /* 48px */
+  --space-7x: calc(var(--base-unit) * 7);       /* 56px */
+  --space-8x: calc(var(--base-unit) * 8);       /* 64px */
+  --space-9x: calc(var(--base-unit) * 9);       /* 72px */
+  --space-10x: calc(var(--base-unit) * 10);     /* 80px */
+  --space-11x: calc(var(--base-unit) * 11);     /* 88px */
+  --space-12x: calc(var(--base-unit) * 12);     /* 96px */
+  --space-14x: calc(var(--base-unit) * 14);     /* 112px */
+  --space-16x: calc(var(--base-unit) * 16);     /* 128px */
+  --space-20x: calc(var(--base-unit) * 20);     /* 160px */
+  --space-24x: calc(var(--base-unit) * 24);     /* 192px */
+  --space-28x: calc(var(--base-unit) * 28);     /* 224px */
+  --space-32x: calc(var(--base-unit) * 32);     /* 256px */
+
+
+}
+
+/* Example of applying styles to a hypothetical Radix component */
+.radix-heading {
+  font-family: var(--heading-font-family);
+  font-size: var(--typo-h1-font-size);
+  font-weight: var(--typo-h1-font-weight);
+  line-height: var(--typo-h1-line-height);
+  letter-spacing: var(--typo-h1-letter-spacing);
+  color: var(--color-primary);
+}
+
+
+
+:root, .light, .light-theme {
+  --purple-1: #FFFFFF; /* Surface Primary */
+  --purple-2: #FAF8F7; /* Surface Secondary */
+  --purple-3: #F7F3F2; /* Surface Tertiary */
+  --purple-4: #FEF9F7; /* Surface Background */
+  --purple-5: #FCF2F0; /* Surface Background Secondary */
+  --purple-6: #FCE8FA; /* Surface Accent_020 Regular */
+  --purple-7: #F8CEF4; /* Surface Accent_020 Hover */
+  --purple-8: #F4BEEE; /* Surface Accent_020 Active */
+  --purple-9: #C95EBE; /* Accent Regular */
+  --purple-10: #BD42AF; /* Accent Hover */
+  --purple-11: #AB3F9F; /* Accent Active /*/
+  --purple-12: #591d53;
+
+  --purple-a1: #ff00aa03;
+  --purple-a2: #c000a008;
+  --purple-a3: #cc00a614;
+  --purple-a4: #c2009b21;
+  --purple-a5: #b200912e;
+  --purple-a6: #a4008a3d;
+  --purple-a7: #99008050;
+  --purple-a8: #92007f69;
+  --purple-a9: #aa0098a1;
+  --purple-a10: #9b008bad;
+  --purple-a11: #88007bbf;
+  --purple-a12: #44003de2;
+
+  --purple-surface: #FEF9F7;
+  --purple-indicator: #c95ebe;
+  --purple-track: #c95ebe;
+  --purple-contrast: #2C1338;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  @media (color-gamut: p3) {
+    :root, .light, .light-theme {
+      --purple-1: #FFFFFF; /* Surface Primary */
+      --purple-2: #FAF8F7; /* Surface Secondary */
+      --purple-3: #F7F3F2; /* Surface Tertiary */
+      --purple-4: #FEF9F7; /* Surface Background */
+      --purple-5: #FCF2F0; /* Surface Background Secondary */
+      --purple-6: #FCE8FA; /* Surface Accent_020 Regular */
+      --purple-7: #F8CEF4; /* Surface Accent_020 Hover */
+      --purple-8: #F4BEEE; /* Surface Accent_020 Active */
+      --purple-9: #C95EBE; /* Accent Regular */
+      --purple-10: #BD42AF; /* Accent Hover */
+      --purple-11: #AB3F9F; /* Accent Active /*/
+      --purple-12: #591d53;
+
+      --purple-a1: color(display-p3 0.675 0.024 0.675 / 0.012);
+      --purple-a2: color(display-p3 0.635 0.02 0.635 / 0.032);
+      --purple-a3: color(display-p3 0.635 0.008 0.584 / 0.075);
+      --purple-a4: color(display-p3 0.627 0.008 0.565 / 0.126);
+      --purple-a5: color(display-p3 0.58 0.004 0.514 / 0.177);
+      --purple-a6: color(display-p3 0.537 0.004 0.502 / 0.236);
+      --purple-a7: color(display-p3 0.49 0.004 0.463 / 0.306);
+      --purple-a8: color(display-p3 0.478 0.004 0.459 / 0.404);
+      --purple-a9: color(display-p3 0.569 0 0.549 / 0.608);
+      --purple-a10: color(display-p3 0.518 0 0.506 / 0.655);
+      --purple-a11: color(display-p3 0.451 0 0.439 / 0.722);
+      --purple-a12: color(display-p3 0.22 0 0.216 / 0.871);
+
+      --purple-surface: #FEF9F7;
+      --purple-indicator: #c95ebe;
+      --purple-track: #c95ebe;
+      --purple-contrast: #2C1338;
+    }
+  }
+}
+
+.dark, .dark-theme {
+  --purple-1: #1F0F29; /* Surface Primary */
+  --purple-2: #1C0F24; /* Surface Secondary */
+  --purple-3: #180E20; /* Surface Tertiary */
+  --purple-4: #130C18; /* Surface Background */
+  --purple-5: #0D0A10; /* Surface Background Secondary */
+  --purple-6: #3D1F3A; /* Surface Accent_020 Regular */
+  --purple-7: #4D2849; /* Surface Accent_020 Hover */
+  --purple-8: #562E51; /* Surface Accent_020 Active */
+  --purple-9: #D164C5; /* Accent Regular */
+  --purple-10: #D274C8; /* Accent Hover */
+  --purple-11: #D482CB; /* Accent Active /*/
+  --purple-12: oklch(90.6% 0.054 331.7);
+
+
+  --purple-a1: #de00ab05;
+  --purple-a2: #ff22ee0f;
+  --purple-a3: #fc47e826;
+  --purple-a4: #ff39e93a;
+  --purple-a5: #ff4fed47;
+  --purple-a6: #ff66ed57;
+  --purple-a7: #fd77ed70;
+  --purple-a8: #ff7ff193;
+  --purple-a9: #ff78f0ce;
+  --purple-a10: #ff70efc0;
+  --purple-a11: #fe95f0f5;
+  --purple-a12: #fedaf8f6;
+
+  --purple-contrast: #DBCAE2;
+  /* --purple-surface: #2d132b80; */
+  --purple-1: color(display-p3 0.110 0.061 0.153 / 1.000);
+  --purple-indicator: #d164c5;
+  --purple-track: #d164c5;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  @media (color-gamut: p3) {
+    .dark, .dark-theme {
+      --purple-1: #1F0F29; /* Surface Primary */
+      --purple-2: #1C0F24; /* Surface Secondary */
+      --purple-3: #180E20; /* Surface Tertiary */
+      --purple-4: #130C18; /* Surface Background */
+      --purple-5: #0D0A10; /* Surface Background Secondary */
+      --purple-6: #3D1F3A; /* Surface Accent_020 Regular */
+      --purple-7: #4D2849; /* Surface Accent_020 Hover */
+      --purple-8: #562E51; /* Surface Accent_020 Active */
+      --purple-9: #D164C5; /* Accent Regular */
+      --purple-10: #D274C8; /* Accent Hover */
+      --purple-11: #D482CB; /* Accent Active /*/
+      --purple-12: oklch(90.6% 0.054 331.7);
+
+      --purple-a1: color(display-p3 0.110 0.061 0.153 / 1.000);
+      --purple-a2: color(display-p3 0.101 0.061 0.135 / 1.000);
+      --purple-a3: color(display-p3 0.087 0.056 0.120 / 1.000);
+      --purple-a4: color(display-p3 0.070 0.048 0.090 / 1.000);
+      --purple-a5: color(display-p3 0.049 0.040 0.061 / 1.000);
+      --purple-a6: color(display-p3 0.218 0.125 0.220 / 1.000);
+      --purple-a7: color(display-p3 0.276 0.162 0.277 / 1.000);
+      --purple-a8: color(display-p3 0.309 0.186 0.308 / 1.000);
+      --purple-a9: color(display-p3 0.744 0.406 0.746 / 1.000);
+      --purple-1a0: color(display-p3 0.758 0.467 0.761 / 1.000);
+      --purple-1a1: color(display-p3 0.774 0.520 0.776 / 1.000);
+
+      --purple-contrast: #DBCAE2;
+      /* --purple-surface: color(display-p3 0.157 0.078 0.157 / 0.5); */
+      --purple-1: color(display-p3 0.110 0.061 0.153 / 1.000);
+      --purple-indicator: oklch(66.7% 0.18 331.7);
+      --purple-track: oklch(66.7% 0.18 331.7);
+    }
+  }
+}
+
+
+
+/* Component overrides */
+
+.rt-BaseButton {
+  cursor: pointer;
+}
+
+
+
+:root, .light, .light-theme {
+  --blue-1: #fdfdfe;
+  --blue-2: #f7f9ff;
+  --blue-3: #edf2fe;
+  --blue-4: #dfeaff;
+  --blue-5: #d0dfff;
+  --blue-6: #bdd1ff;
+  --blue-7: #a6bff9;
+  --blue-8: #87a5ef;
+  --blue-9: #3d63dd;
+  --blue-10: #3657c3;
+  --blue-11: #395bc7;
+  --blue-12: #1d2e5c;
+
+  --blue-a1: #00008002;
+  --blue-a2: #0040ff08;
+  --blue-a3: #0047f112;
+  --blue-a4: #0058ff20;
+  --blue-a5: #0052ff2f;
+  --blue-a6: #004eff42;
+  --blue-a7: #0048ee59;
+  --blue-a8: #0040dd78;
+  --blue-a9: #0032d2c2;
+  --blue-a10: #002ab3c9;
+  --blue-a11: #002cb7c6;
+  --blue-a12: #001347e2;
+
+  --blue-contrast: #fff;
+  --blue-surface: #f5f8ffcc;
+  --blue-indicator: #3d63dd;
+  --blue-track: #3d63dd;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  @media (color-gamut: p3) {
+    :root, .light, .light-theme {
+      --blue-1: oklch(99.4% 0.001 266.8);
+      --blue-2: oklch(98.3% 0.008 266.8);
+      --blue-3: oklch(96.1% 0.017 266.8);
+      --blue-4: oklch(93.5% 0.034 266.8);
+      --blue-5: oklch(90.3% 0.051 266.8);
+      --blue-6: oklch(86.3% 0.071 266.8);
+      --blue-7: oklch(80.7% 0.087 266.8);
+      --blue-8: oklch(73% 0.113 266.8);
+      --blue-9: oklch(54.3% 0.191 266.8);
+      --blue-10: oklch(49.7% 0.173 266.8);
+      --blue-11: oklch(51% 0.173 266.8);
+      --blue-12: oklch(31.3% 0.086 266.8);
+
+      --blue-a1: color(display-p3 0.02 0.02 0.51 / 0.008);
+      --blue-a2: color(display-p3 0.02 0.267 0.878 / 0.032);
+      --blue-a3: color(display-p3 0.008 0.239 0.886 / 0.067);
+      --blue-a4: color(display-p3 0.004 0.306 0.937 / 0.118);
+      --blue-a5: color(display-p3 0.004 0.278 0.933 / 0.173);
+      --blue-a6: color(display-p3 0.004 0.247 0.937 / 0.244);
+      --blue-a7: color(display-p3 0.004 0.231 0.871 / 0.33);
+      --blue-a8: color(display-p3 0.004 0.204 0.808 / 0.448);
+      --blue-a9: color(display-p3 0 0.153 0.773 / 0.726);
+      --blue-a10: color(display-p3 0 0.129 0.655 / 0.761);
+      --blue-a11: color(display-p3 0 0.133 0.667 / 0.746);
+      --blue-a12: color(display-p3 0 0.059 0.251 / 0.871);
+
+      --blue-contrast: #fff;
+      --blue-surface: color(display-p3 0.961 0.973 1 / 0.8);
+      --blue-indicator: oklch(54.3% 0.191 266.8);
+      --blue-track: oklch(54.3% 0.191 266.8);
+    }
+  }
+}

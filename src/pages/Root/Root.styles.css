@@ -1,0 +1,10 @@
+.rt-BaseTabListTrigger:where([data-state='active'], [data-active])::before {
+	content: none;
+}
+.rt-BaseTabList {
+	box-shadow: none;
+}
+
+.rt-BaseTabListTrigger  { 
+	cursor: pointer;
+}
